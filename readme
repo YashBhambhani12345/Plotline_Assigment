@@ -1,0 +1,30 @@
+Login API
+
+The Login API is an integral part of user authentication in your application. It allows users to authenticate themselves by providing their email and password. The API checks the provided credentials against a database of registered users. If the credentials are correct, the user is granted access to protected resources within your application.
+
+HTTP Method: POST
+Endpoint: /api/users/login
+Request Parameters: email (user's email) and password (user's password)
+Response: If the credentials are valid, the API returns a success message with a status code of 200. If the credentials are invalid, it returns an error message with a status code of 401 (Unauthorized).
+Logout API
+
+The Logout API is used to end a user's session, effectively logging them out of the application. When a user logs out, any active session is destroyed, and the user must reauthenticate to access protected resources. This API helps protect user privacy and security by terminating their session.
+
+HTTP Method: GET
+Endpoint: /api/users/logout
+Response: If the user's session is successfully destroyed, the API returns a success message with a status code of 200. If the user is not authenticated (not logged in), it returns an error message with a status code of 401 (Unauthorized).
+These APIs are essential for securing user accounts and maintaining user sessions in your application. Users can log in to access their accounts, and when they're done, they can log out to protect their session and data.
+
+Edit User API
+
+The Edit User API provides functionality for registered users to update their user profile information. Users can modify their personal details, such as their name, email address, or other profile information. This API is essential for allowing users to keep their profiles up-to-date and make changes as necessary.
+
+HTTP Method: PUT
+Endpoint: /api/users/edit
+Request Parameters: The API typically expects the user to be authenticated and may require authentication credentials. It may also accept a JSON request body with the updated user profile information, such as the user's new name, email address, or other fields.
+Response: If the update is successful, the API returns a success message with a status code of 200. If there are any errors, it returns an error message with an appropriate status code.
+The Edit User API plays a crucial role in user management, allowing users to maintain their profiles and keep their information accurate and current. This feature enhances the user experience and ensures that user data is always up-to-date.
+
+
+
+
